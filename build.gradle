@@ -1,0 +1,35 @@
+// 프로젝트 플러그인 의존성 관리 설정
+buildscript {
+    // build.gradle에서 사용하는 전역변수 설정
+    ext {
+        springBootVersion = '2.1.7.RELEASE'
+    }
+    // 각종 의존성(라이브러리)들을 어떤 원격 저장소에 받을지 정함
+    repositories {
+        mavenCentral()
+        jcenter() // 업로드 난이도가 쉬움, 추세
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+// 선언한 플러그인 의존성들을 적용할 것인지 결정, 필수 플러그인 항상 추가!
+apply plugin : 'java'
+apply plugin : 'eclipse'
+apply plugin : 'org.springframework.boot'
+// io.spring.dependency-management : 스프링 부트의 의존성 관리 플러그인 꼭 추가!
+apply plugin : 'io.spring.dependency-management'
+
+group 'com.youngho.book'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+// 프로젝트 개발에 필요한 의존성 선언
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
