@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;
  */
 @Getter
 @RequiredArgsConstructor
-public class HelloResponesDto {
+public class HelloResponeseDto {
     private final String name;
     private final int amount;
 }

@@ -11,7 +11,7 @@ public class HelloResponseDtoTest {
         int amount = 1000;
 
         //when
-        HelloResponesDto dto = new HelloResponesDto(name, amount);
+        HelloResponeseDto dto = new HelloResponeseDto(name, amount);
 
         //then
         // assertThat - assertj 라이브러리의 검증 메서드 / 메서드 체이닝 지원(메서드를 이어붙여서 사용가능함)
