@@ -51,7 +51,7 @@ public class PostsRepositoryTest {
     * */
     @Test
     public void 게시글저장_불러오기() {
-        //given
+        //given - 테스트 기반 환경을 구축하는 단계 / 여기선 @Builder의 사용법도 같이 확인
         String title = "테스트 게시글";
         String content = "테스트 본문";
         /*
@@ -64,13 +64,13 @@ public class PostsRepositoryTest {
                 .author("alfkwl1239@gamil.com")
                 .build());
 
-        //when
+        //when - 테스트 하고자 하는 행위 선언 / 여기선 Posts가 DB에 insert 되는 것을 확인하기 위함
         /*
         *   postsRepository.findAll() - posts 테이블에 있는 모든 데이터를 조회해오는 메서드
         * */
         List<Posts> postsList = postsRepository.findAll();
 
-        //then
+        //then - 테스트 결과 검증 실제로 DB에 insert 되는 것을 확인하기 위함
         Posts posts = postsList.get(0);
         assertThat(posts.getTitle()).isEqualTo(title);
         assertThat(posts.getContent()).isEqualTo(content);
