@@ -1,5 +1,6 @@
 package com.youngho.book.springboot.domain.posts;
 
+import com.youngho.book.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -36,7 +37,7 @@ import javax.persistence.Id;
 * 값 변경 필요시는 명확하게 목적과 의도를 나타낼 수 있는 메소드 추가 필요
 * 값을 채울때는 생성자를 통해 최종값을 채운 뒤 DB에 삽입
  */
-public class Posts {
+public class Posts extends BaseTimeEntity {
     /*
      *  @Id - 해당 테이블의 PK 필드를 나타냄
      *  @GeneratedValue - PK 생성 규칙을 나타냄
