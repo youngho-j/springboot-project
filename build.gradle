@@ -35,7 +35,7 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     // 인메모리 관계형 데이터베이스, 설치 필요 없이 프로젝트 의존성으로만 관리 가능, 메모리상 실행 - 재시작시 초기화
     compile('com.h2database:h2')
-    // 머스테치 - 수많은 언어를 지원하는 가장 심플한 템플릿 엔진 /
+    // 머스테치 - 수많은 언어를 지원하는 가장 심플한 템플릿 엔진
     compile('org.springframework.boot:spring-boot-starter-mustache')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

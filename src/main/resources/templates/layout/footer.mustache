@@ -1,4 +1,21 @@
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"/>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"/>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!--
+index.js 추가
+index.js의 호출 경로를 보면 /(절대경로)로 시작
+왜 그런가?
+스프링 부트는 기본적으로 src/main/resources/static에 위치한 자바스크립트, css, 이미지 등
+정적 파일들은 URL에서 /로 설정 되기때문에
+
+0409 에러
+메인 페이지 출력시 index.js를 찾지 못해서 net::ERR_ABORTED 404 에러
+
+해결
+폴더 삭제 후 다시 만들었더니 정상출력 확인 / h2-console을 통해 DB도 데이터 저장 확인
+왜 해결이 됐는지 모르겠는데 추측으로는 폴더명 생성시 / 대신 .을 써서 그런듯?
+-->
+<script src="/js/app/index.js"></script>
+
 </body>
 </html>
