@@ -11,7 +11,6 @@ public class PostsListResponseDto {
     private Long id;
     private String title;
     private String author;
-    @JsonFormat(pattern = "yyyy-MM-dd:mm:ss", timezone = "Asia/Seoul")
     private LocalDateTime modifiedDate;
 
     public PostsListResponseDto(Posts entity) {
