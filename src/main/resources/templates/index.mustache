@@ -8,6 +8,16 @@
     <div class="row">
         <div class="col-md-6">
             <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+            <!-- 머스테치는 if 제공하지 않음. 따라서 최종값을 넘겨 받아 존재하는지 않하는지를 확인해야함-->
+            <!-- 참고 windows 환경에서 머스테치 userName 사용시 윈도우 환경 변수인 %USERNAME% 결과가 표기됨-->
+            {{#userLoginName}}
+                Logged in as: <span id="user">{{userLoginName}}</span>
+                <a href="/logout" class="btn btn-info active" role="button">LogOut</a>
+            {{/userLoginName}}
+            <!-- 해당 값이 존재하지 않는 경우-->
+            {{^userLoginName}}
+                <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
+            {{/userLoginName}}
         </div>
     </div>
     <br>
