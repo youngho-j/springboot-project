@@ -2,3 +2,5 @@
 .gradle
 /build/
 .idea
+# google
+application-oauth.properties
