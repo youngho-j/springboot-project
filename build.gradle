@@ -37,6 +37,9 @@ dependencies {
     compile('com.h2database:h2')
     // 머스테치 - 수많은 언어를 지원하는 가장 심플한 템플릿 엔진
     compile('org.springframework.boot:spring-boot-starter-mustache')
+    /* 스프링 시큐리티 관련 의존성 - 클라이언트 입장에서 소셜 기능 구현시 필요한 의존성
+    *  spring-security-oauth2-client, spring-security-oauth2-jose를 기본으로 관리
+    */
+    compile('org.springframework.boot:spring-boot-starter-oauth2-client')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
-
