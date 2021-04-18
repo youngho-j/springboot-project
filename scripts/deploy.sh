@@ -50,3 +50,6 @@ echo "> JAR Name: $JAR_NAME"
 # 찾은 jar 파일명으로 해당 jar파일을 nohup으로 실행, 내장 톰캣 사용하므로 jar파일만 있으면 바로 웹 애플리케이션 서버 실행 가능
 # 실행자가 터미널을 종료해도 애플리케이션은 계속 구동 되도록 nohup명령어를 사용
 nohup java -jar -Dspring.config.location=classpath:/application.properties,/home/ec3-user/app/application-oauth.properties $REPOSITORY/$JAR_NAME 2>&1 &
+# -Dspring.config.location : 스프링 설정 파일 위치 지정, application.properties, OAuth 설정 파일 위치 지정
+# classpath가 붙으면 jar 안에 있는 resources 디렉토리 기준으로 경로 생성
+# 프로젝트 외부에 있는 파일은 절대경로 사용
