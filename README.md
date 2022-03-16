@@ -111,6 +111,7 @@ IDEA 콘솔과 Tomcat 인코딩 환경이 달라져 한글 깨짐 현상 발생
  - [오류해결 참고링크](https://github.com/jojoldu/freelec-springboot2-webservice/issues/358)  
  - [명령어 참고링크](https://recipes4dev.tistory.com/175)   
 </details>
+<details>
 <summary>EC2 -> RDS 접근 설정시 Connection refused</summary>
 
 #### 현상
